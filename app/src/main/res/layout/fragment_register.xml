@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".employee.fragment.user.RegisterFragment">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/icon_green"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+            android:id="@+id/line1"
+            android:layout_marginTop="100dp"
+            android:textSize="24sp"
+            android:textColor="@color/icon_green"
+            android:text="Đăng kí tài khoản"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:id="@+id/lineAccount"
+            android:padding="8dp"
+            android:layout_below="@+id/line1"
+            android:orientation="vertical"
+            android:background="@drawable/border_corner_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp" >
+        <RelativeLayout
+                android:id="@+id/lineUserName"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <ImageView
+                    android:id="@+id/iconUser"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_user"
+                    android:backgroundTint="@color/icon_green"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+            <EditText
+                    android:layout_marginLeft="11dp"
+                    android:hint="Nhập tên đăng nhập"
+                    android:layout_toRightOf="@+id/iconUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/linePassword"
+                android:layout_margin="4dp"
+                android:layout_below="@+id/lineUserName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <ImageView
+                    android:id="@+id/iconPassword"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_password"
+                    android:backgroundTint="@color/icon_green"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+            <EditText
+                    android:layout_marginLeft="10dp"
+                    android:hint="Tên mật khẩu"
+                    android:layout_toRightOf="@+id/iconPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/lineAddress"
+                android:layout_margin="4dp"
+                android:layout_below="@+id/linePassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <ImageView
+                    android:id="@+id/iconAddress"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_address"
+                    android:backgroundTint="@color/icon_green"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+            <EditText
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Nhập địa chỉ"
+                    android:layout_toRightOf="@+id/iconAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <Button
+            android:layout_alignParentBottom="true"
+            android:text="Đăng kí"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/border_button_green"
+            android:id="@+id/btnRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

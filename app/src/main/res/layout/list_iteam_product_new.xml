@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:card_view="http://schemas.android.com/tools"
+                                   card_view:cardCornerRadius="24dp"
+                                   android:layout_width="160dp"
+                                   card_view:cardElevation="3dp"
+                                   android:layout_margin="4dp"
+                                   android:layout_height="200dp">
+    <LinearLayout
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_marginTop="0dp"
+                android:id="@+id/imgSale"
+                android:src="@drawable/thuoc"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"/>
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/imgSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/txtNameProduct"
+                    android:text="Panadol Extra"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/greenText"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:id="@+id/txtDetailPro"
+                    android:text="Chi tiết sản phẩm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Đặt hàng"
+            app:titleTextColor="@color/icon_green"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+            android:id="@+id/txtProductLst"
+            android:layout_below="@+id/toolbar"
+            android:text="DANH SÁCH THUỐC"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@+id/endLine"
+            tools:listitem="@layout/list_iteam_product"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="16dp"
+            android:id="@+id/recyclerProductLst"
+            android:layout_below="@+id/txtProductLst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+   <RelativeLayout
+           android:id="@+id/endLine"
+           android:layout_alignParentBottom="true"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:background="@drawable/border_group_button"
+           android:backgroundTint="@color/icon_green"
+           android:orientation="horizontal"
+           android:paddingLeft="24dp"
+           android:paddingRight="24dp"
+           android:layout_width="match_parent"
+           android:layout_height="50dp">
+       <RelativeLayout
+
+               android:layout_centerVertical="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+           <TextView
+                   android:textSize="16sp"
+                   android:textColor="@color/colorWhite"
+                   android:text="Tổng : "
+                   android:id="@+id/txtSumMoney"
+                   android:layout_centerVertical="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           <TextView
+                   android:textSize="16sp"
+                   android:textColor="@color/colorWhite"
+                   android:id="@+id/txtSumPrice"
+                   android:text="0đ"
+                   android:layout_toRightOf="@+id/txtSumMoney"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+       </RelativeLayout>
+       <Button
+               android:backgroundTint="@color/colorWhite"
+               android:background="@drawable/ic_invoice_bottom"
+               android:layout_width="@dimen/width_height_icon"
+               android:id="@+id/btnCart"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_height="@dimen/width_height_icon"/>
+   </RelativeLayout>
+    <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progresMain"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

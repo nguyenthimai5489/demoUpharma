@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Upharma</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="error_db_text">Có lỗi xảy ra</string>
+    <string name="error_network_text">Kiểm tra lại kết nối mạng</string>
+    <string name="error_token_text">Kiểm tra lại kết nối mạng</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

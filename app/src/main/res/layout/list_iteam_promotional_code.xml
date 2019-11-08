@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:card_view="http://schemas.android.com/tools"
+                                   card_view:cardCornerRadius="24dp"
+                                   android:layout_margin="8dp"
+                                   card_view:cardElevation="3dp"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content">
+    <RelativeLayout
+            android:padding="4dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/txtNamePromotion"
+                android:text="Giảm giá 20% "
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <Button
+                android:layout_below="@+id/txtNamePromotion"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:text="áp dụng ngay"
+                android:textColor="@color/icon_green"
+                android:textSize="16sp"
+                android:id="@+id/btnUsePromotion"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+        <TextView
+                android:layout_below="@+id/btnUsePromotion"
+                android:id="@+id/txtDetailPromotion"
+                android:text="Giảm giá 15% cho đơn hàng đối với khách hàng mới, tối thiểu 1.000.000đ "
+                android:textColor="@color/half_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/deadline"
+                android:layout_below="@+id/txtDetailPromotion"
+                android:text="Hết hạn ngày 11/11/2019"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

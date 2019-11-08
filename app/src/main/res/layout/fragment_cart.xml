@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent" xmlns:card_view="http://schemas.android.com/tools"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context=".employee.fragment.CartFragment">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Chi tiết đơn hàng"
+            app:titleTextColor="@color/icon_green"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+            android:id="@+id/lineOrderMain"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                        android:layout_margin="8dp"
+                        android:id="@+id/lineAddress"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:padding="4dp"
+                            android:id="@+id/line1"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                                android:src="@drawable/ic_position"
+                                android:id="@+id/imgIconPosition"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"/>
+                        <LinearLayout
+                                android:layout_marginLeft="4dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:text="Địa điểm giao hàng"
+                                    android:textColor="@color/half_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:id="@+id/txtAddressShip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                            android:backgroundTint="@color/iron"
+                            android:hint="Thêm ghi chú"
+                            android:paddingLeft="16dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/border_edit_text"
+                            android:id="@+id/edtNote"
+                            android:textSize="12dp"
+                            android:textColor="@color/half_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"/>
+                </LinearLayout>
+                <TextView
+                        android:id="@+id/txtDistance1"
+                        android:background="@color/iron"
+                        android:layout_below="@+id/lineAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"/>
+                <LinearLayout
+                        android:layout_margin="8dp"
+                        android:orientation="vertical"
+                        android:layout_below="@id/txtDistance1"
+                        android:id="@+id/lineProductLst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:layout_marginRight="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:text="Đơn hàng của bạn"
+                                android:textSize="18sp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+                        <TextView
+                                android:background="@null"
+                                android:text="THÊM SP"
+                                android:id="@+id/txtAddProduct"
+                                android:textStyle="bold"
+                                android:textColor="@color/icon_green"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/recyclerInvoiceLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+                <RelativeLayout
+                        android:layout_margin="4dp"
+                        android:layout_below="@+id/lineProductLst"
+                        android:id="@+id/linePromotion"
+                        android:orientation="vertical"
+                        android:backgroundTint="@color/lightRed"
+                        android:background="@drawable/border_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:id="@+id/txtSale"
+                            android:layout_height="40dp"/>
+                    <Button
+                            android:id="@+id/btnUsePromotion"
+                            android:background="@drawable/border_edit_text"
+                            android:backgroundTint="@color/darkRed"
+                            android:text="Mã KM"
+                            android:layout_marginRight="8dp"
+                            android:textAllCaps="false"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"/>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_margin="8dp"
+                        android:layout_below="@id/linePromotion"
+                        android:layout_width="match_parent"
+                        card_view:cardElevation="3dp"
+                        card_view:cardCornerRadius="24dp"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:textColor="@color/half_black"
+                                    android:text="Giá tiền: "
+                                    android:layout_marginTop="4dp"
+                                    android:paddingLeft="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/txtPrice"
+                                    android:text="0 đ"
+                                    android:textColor="@color/colorBlack"
+                                    android:paddingRight="16dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:layout_alignParentEnd="true"
+                                    android:layout_marginRight="0dp" android:layout_marginEnd="0dp"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:paddingLeft="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:textColor="@color/half_black"
+                                    android:text="Phí vận chuyển: "
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/txtPriceShip"
+                                    android:text="0 đ"
+                                    android:textColor="@color/colorBlack"
+                                    android:paddingRight="16dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:paddingLeft="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:textColor="@color/half_black"
+                                    android:text="Khuyến mại: "
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/txtPromotion"
+                                    android:text="0 đ"
+                                    android:textColor="@color/icon_green"
+                                    android:paddingRight="16dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                                android:layout_weight="1"
+                                android:layout_margin="4dp"
+                                android:paddingLeft="8dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <TextView
+                                    android:textColor="@color/half_black"
+                                    android:text="Tổng thanh toán: "
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:id="@+id/txtAllPrice"
+                                    android:text="0 đ"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"
+                                    android:paddingRight="16dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+        <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:id="@+id/endLine"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:paddingLeft="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:background="@color/colorWhite"
+                        android:textColor="@color/half_black"
+                        android:text="Tổng: "
+                        android:layout_gravity="center"
+                        android:textSize="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/txtAll"
+                        android:text="0 đ"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <Button
+                    android:id="@+id/btnOrder"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/border_button_green"
+                    android:layout_width="match_parent"
+                    android:text="Đặt hàng"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:layout_height="35dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progresMain"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>
